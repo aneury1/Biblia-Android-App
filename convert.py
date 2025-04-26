@@ -1,0 +1,1 @@
+file:///home/neon/Documents/projects/other_projects/bible-json/converter.py
