@@ -19,10 +19,8 @@ import com.aneury1.biblia.Data.BibleVerse
 @Composable
 fun BibleBook(navHostController: NavHostController, list: String)
 {
-    val book: List<BibleVerse>? = getWholeBook()["Genesis"]
+    val book: List<BibleVerse>? = getWholeBook()[list]
     if(book?.size!! > 0){
-
-
         Column(
             modifier = Modifier.fillMaxSize()
         ) {

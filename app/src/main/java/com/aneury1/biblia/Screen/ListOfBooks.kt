@@ -1,19 +1,34 @@
 package com.aneury1.biblia.Screen
 
 import android.util.Log
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.pointer.motionEventSpy
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.aneury1.biblia.Data.BibleFunction.BibleData
 
 @Composable
 fun ListOfBooks(navHostController: NavHostController){
     print("Bible")
-    LazyColumn(){
-       val books = BibleData.getBooksNames()
-       items(count = books.size){
-           Log.d("Bible","Book ${books[it]}");
-           BookTitle(navHostController, books[it])
-       }
-   }
+    Column(
+        modifier = Modifier.fillMaxSize().padding(32.dp)
+    ){
+        Spacer(modifier=Modifier.height(10.dp))
+        LazyColumn(){
+            val books = BibleData.getBooksNames()
+            items(count = books.size){
+                Log.d("Bible","Book ${books[it]}");
+                BookTitle(navHostController, books[it])
+            }
+        }
+        Spacer(modifier=Modifier.height(10.dp))
+    }
 }
