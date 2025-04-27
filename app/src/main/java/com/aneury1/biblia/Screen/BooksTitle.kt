@@ -24,12 +24,18 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 
+fun replaceUnderscore(currentText: String) :String{
+
+   val ret= currentText.replace('_',' ')
+
+    return ret;
+}
 
 @Composable
 fun BookTitle(navHostController: NavHostController,title: String){
     Row(){
-
-        Text(title,
+        val textTitle = replaceUnderscore(title)
+        Text(textTitle,
           modifier= Modifier.padding(10.dp)
               .clickable {
                   print(title)
@@ -38,58 +44,5 @@ fun BookTitle(navHostController: NavHostController,title: String){
           fontSize = 24.sp,
           fontWeight = FontWeight.Black,
           )
-    }
-}
-
-@Composable
-fun ChapterParagraph(number: Int, verseNo: Int, text: String){
-    val context = LocalContext.current
-    Row(
-        modifier = Modifier
-            .pointerInput(Unit){
-               detectTapGestures {
-                   val sendIntent = Intent().apply {
-                       action = Intent.ACTION_SEND
-                       putExtra(Intent.EXTRA_TEXT, text)
-                       type = "text/plain"
-                   }
-                   val shareIntent = Intent.createChooser(sendIntent, null)
-                   context.startActivity(shareIntent)
-               }
-            }
-            .padding(4.dp).background(Color(0xe9edf5ff)).fillMaxWidth(),
-        horizontalArrangement = Arrangement.Center,
-    ){
-
-        Column{
-        Text(
-            text = buildAnnotatedString {
-                withStyle(style = SpanStyle(
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 23.sp,
-                    color = Color.Red
-                )) {
-                    append("$number. ")
-                }
-                withStyle(style = SpanStyle(
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 23.sp,
-                    color = Color. Blue
-                )) {
-                    append("$verseNo. ")
-                }
-                append(text)
-            },
-            fontSize = 20.sp,
-            modifier = Modifier.padding(8.dp)
-        )
-    }
-        Column {
-            Button({
-
-            }) {
-                
-            }
-        }
     }
 }

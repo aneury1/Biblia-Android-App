@@ -20,6 +20,7 @@ import com.aneury1.biblia.Data.BibleVerse
 fun BibleBook(navHostController: NavHostController, list: String)
 {
     val book: List<BibleVerse>? = getWholeBook()[list]
+    var currentChapter= 1
     if(book?.size!! > 0){
         Column(
             modifier = Modifier.fillMaxSize()
@@ -30,7 +31,13 @@ fun BibleBook(navHostController: NavHostController, list: String)
             LazyColumn() {
                 items(count = book.size){
                     val ch = book[it]
-                    ChapterParagraph(ch.chapter, ch.verse, ch.text)
+                    var newc = false
+                    if(ch.chapter!=currentChapter){
+                        newc = true;
+                        currentChapter = ch.chapter
+                    }
+
+                    ChapterParagraph(ch.chapter, ch.verse, ch.text, newc)
                 }
             }
 
