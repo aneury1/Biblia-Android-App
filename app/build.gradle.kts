@@ -123,4 +123,17 @@ dependencies {
     implementation("androidx.room:room-paging:$room_version")
 
 
+    /// Coroutines
+    // Kotlin coroutines core library
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+
+    // For Android main thread support and integration with Compose
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    // Jetpack Compose UI (if not added yet)
+            implementation("androidx.compose.ui:ui:1.5.0")
+
+    // Compose runtime (includes rememberCoroutineScope)
+            implementation("androidx.compose.runtime:runtime:1.5.0")
+
 }
