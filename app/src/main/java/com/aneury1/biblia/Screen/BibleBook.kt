@@ -17,16 +17,16 @@ import com.aneury1.biblia.Data.BibleFunction.BibleData.getWholeBook
 import com.aneury1.biblia.Data.BibleVerse
 
 @Composable
-fun BibleBook(navHostController: NavHostController, list: String)
+fun BibleBook(navHostController: NavHostController, bookname: String)
 {
-    val book: List<BibleVerse>? = getWholeBook()[list]
+    val book: List<BibleVerse>? = getWholeBook()[bookname]
     var currentChapter= 1
     if(book?.size!! > 0){
         Column(
             modifier = Modifier.fillMaxSize()
         ) {
             Spacer(modifier = Modifier.height(96.dp))
-            Text(list, fontSize = 48.sp, color = Color.Red)
+            Text(bookname, fontSize = 48.sp, color = Color.Red)
 
             LazyColumn() {
                 items(count = book.size){
@@ -36,8 +36,9 @@ fun BibleBook(navHostController: NavHostController, list: String)
                         newc = true;
                         currentChapter = ch.chapter
                     }
+                    val bookName = book[it]
 
-                    ChapterParagraph(ch.chapter, ch.verse, ch.text, newc)
+                    ChapterParagraph(ch.chapter, ch.verse, ch.text,bookname,newc)
                 }
             }
 
