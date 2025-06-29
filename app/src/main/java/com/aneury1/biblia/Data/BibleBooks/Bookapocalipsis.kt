@@ -32,7 +32,7 @@ BibleVerse(66, 2, 5, "Recuerda, por tanto, de dónde has caído, y arrepiéntete
 BibleVerse(66, 2, 6, "Pero tienes esto, que aborreces las obras de los nicolaítas, las cuales yo también aborrezco."),
 BibleVerse(66, 2, 7, "El que tiene oído, oiga lo que el Espíritu dice a las iglesias. Al que venciere, le daré a comer del árbol de la vida, el cual está en medio del paraíso de Dios."),
 BibleVerse(66, 2, 8, "Y escribe al ángel de la iglesia en Esmirna: El primero y el postrero, el que estuvo muerto y vivió, dice esto:"),
-BibleVerse(66, 2, 9, "Yo conozco tus obras, y tu tribulación, y tu pobreza BibleVerse(pero tú eres rico), y la blasfemia de los que se dicen ser judíos, y no lo son, sino sinagoga de Satanás."),
+BibleVerse(66, 2, 9, "Yo conozco tus obras, y tu tribulación, y tu pobreza pero tú eres rico), y la blasfemia de los que se dicen ser judíos, y no lo son, sino sinagoga de Satanás."),
 BibleVerse(66, 2, 10, "No temas en nada lo que vas a padecer. He aquí, el diablo echará a algunos de vosotros en la cárcel, para que seáis probados, y tendréis tribulación por diez días. Sé fiel hasta la muerte, y yo te daré la corona de la vida."),
 BibleVerse(66, 2, 11, "El que tiene oído, oiga lo que el Espíritu dice a las iglesias. El que venciere, no sufrirá daño de la segunda muerte."),
 BibleVerse(66, 2, 12, "Y escribe al ángel de la iglesia en Pérgamo: El que tiene la espada aguda de dos filos dice esto:"),

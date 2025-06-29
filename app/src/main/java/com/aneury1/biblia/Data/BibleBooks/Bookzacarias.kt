@@ -64,7 +64,7 @@ BibleVerse(38, 4, 13, "Y me respondió diciendo:  ¿No sabes qué es esto? Y dij
 BibleVerse(38, 4, 14, "Y él dijo: Estos son los dos ungidos que están delante del Señor de toda la tierra."),
 BibleVerse(38, 5, 1, "De nuevo alcé mis ojos y miré, y he aquí un rollo que volaba."),
 BibleVerse(38, 5, 2, "Y me dijo:  ¿Qué ves? Y respondí: Veo un rollo que vuela, de veinte codos  de largo, y diez codos de ancho."),
-BibleVerse(38, 5, 3, "Entonces me dijo: Esta es la maldición que sale sobre la faz de toda la tierra; porque todo aquel que hurta BibleVerse(como está de un lado del rollo) será destruido; y todo aquel que jura falsamente BibleVerse(como está del otro lado del rollo) será destruido."),
+BibleVerse(38, 5, 3, "Entonces me dijo: Esta es la maldición que sale sobre la faz de toda la tierra; porque todo aquel que hurta  (como está de un lado del rollo) será destruido; y todo aquel que jura falsamente  (como está del otro lado del rollo) será destruido."),
 BibleVerse(38, 5, 4, "Yo la he hecho salir, dice Jehová de los ejércitos, y vendrá a la casa del ladrón, y a la casa del que jura falsamente en mi nombre; y permanecerá en medio de su casa y la consumirá, con sus maderas y sus piedras."),
 BibleVerse(38, 5, 5, "Y salió aquel ángel que hablaba conmigo, y me dijo: Alza ahora tus ojos, y mira qué es esto que sale."),
 BibleVerse(38, 5, 6, "Y dije:  ¿Qué es? Y él dijo: Este es un efa que sale. Además dijo: Esta es la iniquidad de ellos en toda la tierra."),

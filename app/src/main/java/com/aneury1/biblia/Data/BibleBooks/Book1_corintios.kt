@@ -4,7 +4,7 @@ import com.aneury1.biblia.Data.BibleVerse
 
 object book_Book1_corintios {
    fun get_book_Book1_corintios()=listOf(
-        BibleVerse(46, 1, 1, "Pablo, llamado a ser apóstol de Jesucristo por la voluntad de Dios, y el hermano Sóstenes,"),
+     BibleVerse(46, 1, 1, "Pablo, llamado a ser apóstol de Jesucristo por la voluntad de Dios, y el hermano Sóstenes,"),
 BibleVerse(46, 1, 2, "a la iglesia de Dios que está en Corinto, a los santificados en Cristo Jesús, llamados a ser santos con todos los que en cualquier lugar invocan el nombre de nuestro Señor Jesucristo, Señor de ellos y nuestro:"),
 BibleVerse(46, 1, 3, "Gracia y paz a vosotros, de Dios nuestro Padre y del Señor Jesucristo."),
 BibleVerse(46, 1, 4, "Gracias doy a mi Dios siempre por vosotros, por la gracia de Dios que os fue dada en Cristo Jesús;"),
@@ -172,7 +172,7 @@ BibleVerse(46, 8, 1, "En cuanto a lo sacrificado a los ídolos, sabemos que todo
 BibleVerse(46, 8, 2, "Y si alguno se imagina que sabe algo, aún no sabe nada como debe saberlo."),
 BibleVerse(46, 8, 3, "Pero si alguno ama a Dios, es conocido por él."),
 BibleVerse(46, 8, 4, "Acerca, pues, de las viandas que se sacrifican a los ídolos, sabemos que un ídolo nada es en el mundo, y que no hay más que un Dios."),
-BibleVerse(46, 8, 5, "Pues aunque haya algunos que se llamen dioses, sea en el cielo, o en la tierra BibleVerse(como hay muchos dioses y muchos señores),"),
+BibleVerse(46, 8, 5, "Pues aunque haya algunos que se llamen dioses, sea en el cielo, o en la tierra como hay muchos dioses y muchos señores),"),
 BibleVerse(46, 8, 6, "para nosotros, sin embargo, sólo hay un Dios, el Padre, del cual proceden todas las cosas, y nosotros somos para él; y un Señor, Jesucristo, por medio del cual son todas las cosas, y nosotros por medio de él."),
 BibleVerse(46, 8, 7, "Pero no en todos hay este conocimiento; porque algunos, habituados hasta aquí a los ídolos, comen como sacrificado a ídolos, y su conciencia, siendo débil, se contamina."),
 BibleVerse(46, 8, 8, "Si bien la vianda no nos hace más aceptos ante Dios; pues ni porque comamos, seremos más, ni porque no comamos, seremos menos."),
@@ -200,8 +200,8 @@ BibleVerse(46, 9, 16, "Pues si anuncio el evangelio, no tengo por qué gloriarme
 BibleVerse(46, 9, 17, "Por lo cual, si lo hago de buena voluntad, recompensa tendré; pero si de mala voluntad, la comisión me ha sido encomendada."),
 BibleVerse(46, 9, 18, "¿Cuál, pues, es mi galardón? Que predicando el evangelio, presente gratuitamente el evangelio de Cristo, para no abusar de mi derecho en el evangelio."),
 BibleVerse(46, 9, 19, "Por lo cual, siendo libre de todos, me he hecho siervo de todos para ganar a mayor número."),
-BibleVerse(46, 9, 20, "Me he hecho a los judíos como judío, para ganar a los judíos; a los que están sujetos a la ley BibleVerse(aunque yo no esté sujeto a la ley) como sujeto a la ley, para ganar a los que están sujetos a la ley;"),
-BibleVerse(46, 9, 21, "a los que están sin ley, como si yo estuviera sin ley BibleVerse(no estando yo sin ley de Dios, sino bajo la ley de Cristo), para ganar a los que están sin ley."),
+BibleVerse(46, 9, 20, "Me he hecho a los judíos como judío, para ganar a los judíos; a los que están sujetos a la ley aunque yo no esté sujeto a la ley) como sujeto a la ley, para ganar a los que están sujetos a la ley;"),
+BibleVerse(46, 9, 21, "a los que están sin ley, como si yo estuviera sin ley no estando yo sin ley de Dios, sino bajo la ley de Cristo), para ganar a los que están sin ley."),
 BibleVerse(46, 9, 22, "Me he hecho débil a los débiles, para ganar a los débiles; a todos me he hecho de todo, para que de todos modos salve a algunos."),
 BibleVerse(46, 9, 23, "Y esto hago por causa del evangelio, para hacerme copartícipe de él."),
 BibleVerse(46, 9, 24, "¿No sabéis que los que corren en el estadio, todos a la verdad corren, pero uno solo se lleva el premio? Corred de tal manera que lo obtengáis."),

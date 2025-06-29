@@ -4,7 +4,7 @@ import com.aneury1.biblia.Data.BibleVerse
 
 object book_Bookgalatas {
    fun get_book_Bookgalatas()=listOf(
-        BibleVerse(48, 1, 1, "Pablo, apóstol BibleVerse(no de hombres ni por hombre, sino por Jesucristo y por Dios el Padre que lo resucitó de los muertos),"),
+        BibleVerse(48, 1, 1, "Pablo, apóstol no de hombres ni por hombre, sino por Jesucristo y por Dios el Padre que lo resucitó de los muertos),"),
 BibleVerse(48, 1, 2, "y todos los hermanos que están conmigo, a las iglesias de Galacia:"),
 BibleVerse(48, 1, 3, "Gracia y paz sean a vosotros, de Dios el Padre y de nuestro Señor Jesucristo,"),
 BibleVerse(48, 1, 4, "el cual se dio a sí mismo por nuestros pecados para librarnos del presente siglo malo, conforme a la voluntad de nuestro Dios y Padre,"),
@@ -33,9 +33,9 @@ BibleVerse(48, 2, 2, "Pero subí según una revelación, y para no correr o habe
 BibleVerse(48, 2, 3, "Mas ni aun Tito, que estaba conmigo, con todo y ser griego, fue obligado a circuncidarse;"),
 BibleVerse(48, 2, 4, "y esto a pesar de los falsos hermanos introducidos a escondidas, que entraban para espiar nuestra libertad que tenemos en Cristo Jesús, para reducirnos a esclavitud,"),
 BibleVerse(48, 2, 5, "a los cuales ni por un momento accedimos a someternos, para que la verdad del evangelio permaneciese con vosotros."),
-BibleVerse(48, 2, 6, "Pero de los que tenían reputación de ser algo BibleVerse(lo que hayan sido en otro tiempo nada me importa; Dios no hace acepción de personas), a mí, pues, los de reputación nada nuevo me comunicaron."),
+BibleVerse(48, 2, 6, "Pero de los que tenían reputación de ser algo lo que hayan sido en otro tiempo nada me importa; Dios no hace acepción de personas), a mí, pues, los de reputación nada nuevo me comunicaron."),
 BibleVerse(48, 2, 7, "Antes por el contrario, como vieron que me había sido encomendado el evangelio de la incircuncisión, como a Pedro el de la circuncisión"),
-BibleVerse(48, 2, 8, "BibleVerse(pues el que actuó en Pedro para el apostolado de la circuncisión, actuó también en mí para con los gentiles),"),
+BibleVerse(48, 2, 8, "pues el que actuó en Pedro para el apostolado de la circuncisión, actuó también en mí para con los gentiles),"),
 BibleVerse(48, 2, 9, "y reconociendo la gracia que me había sido dada, Jacobo, Cefas y Juan, que eran considerados como columnas, nos dieron a mí y a Bernabé la diestra en señal de compañerismo, para que nosotros fuésemos a los gentiles, y ellos a la circuncisión."),
 BibleVerse(48, 2, 10, "Solamente nos pidieron que nos acordásemos de los pobres; lo cual también procuré con diligencia hacer."),
 BibleVerse(48, 2, 11, "Pero cuando Pedro vino a Antioquía, le resistí cara a cara, porque era de condenar."),
@@ -61,7 +61,7 @@ BibleVerse(48, 3, 9, "De modo que los de la fe son bendecidos con el creyente Ab
 BibleVerse(48, 3, 10, "Porque todos los que dependen de las obras de la ley están bajo maldición, pues escrito está: Maldito todo aquel que no permaneciere en todas las cosas escritas en el libro de la ley, para hacerlas."),
 BibleVerse(48, 3, 11, "Y que por la ley ninguno se justifica para con Dios, es evidente, porque: El justo por la fe vivirá;"),
 BibleVerse(48, 3, 12, "y la ley no es de fe, sino que dice: El que hiciere estas cosas vivirá por ellas."),
-BibleVerse(48, 3, 13, "Cristo nos redimió de la maldición de la ley, hecho por nosotros maldición BibleVerse(porque está escrito: Maldito todo el que es colgado en un madero),"),
+BibleVerse(48, 3, 13, "Cristo nos redimió de la maldición de la ley, hecho por nosotros maldición porque está escrito: Maldito todo el que es colgado en un madero),"),
 BibleVerse(48, 3, 14, "para que en Cristo Jesús la bendición de Abraham alcanzase a los gentiles, a fin de que por la fe recibiésemos la promesa del Espíritu."),
 BibleVerse(48, 3, 15, "Hermanos, hablo en términos humanos: Un pacto, aunque sea de hombre, una vez ratificado, nadie lo invalida, ni le añade."),
 BibleVerse(48, 3, 16, "Ahora bien, a Abraham fueron hechas las promesas, y a su simiente. No dice: Y a las simientes, como si hablase de muchos, sino como de uno: Y a tu simiente, la cual es Cristo."),

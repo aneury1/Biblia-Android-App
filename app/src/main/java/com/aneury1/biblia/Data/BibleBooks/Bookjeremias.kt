@@ -1034,7 +1034,7 @@ BibleVerse(24, 41, 16, "Y Johanán hijo de Carea y todos los capitanes de la gen
 BibleVerse(24, 41, 17, "y fueron y habitaron en Gerutquimam, que está cerca de Belén, a fin de ir y meterse en Egipto,"),
 BibleVerse(24, 41, 18, "a causa de los caldeos; porque los temían, por haber dado muerte Ismael hijo de Netanías a Gedalías hijo de Ahicam, al cual el rey de Babilonia había puesto para gobernar la tierra."),
 BibleVerse(24, 42, 1, "Vinieron todos los oficiales de la gente de guerra, y Johanán hijo de Carea, Jezanías hijo de Osaías, y todo el pueblo desde el menor hasta el mayor,"),
-BibleVerse(24, 42, 2, "y dijeron al profeta Jeremías: Acepta ahora nuestro ruego delante de ti, y ruega por nosotros a Jehová tu Dios por todo este resto BibleVerse(pues de muchos hemos quedado unos pocos, como nos ven tus ojos),"),
+BibleVerse(24, 42, 2, "y dijeron al profeta Jeremías: Acepta ahora nuestro ruego delante de ti, y ruega por nosotros a Jehová tu Dios por todo este resto  (pues de muchos hemos quedado unos pocos, como nos ven tus ojos),"),
 BibleVerse(24, 42, 3, "para que Jehová tu Dios nos enseñe el camino por donde vayamos, y lo que hemos de hacer."),
 BibleVerse(24, 42, 4, "Y el profeta Jeremías les dijo: He oído. He aquí que voy a orar a Jehová vuestro Dios, como habéis dicho, y todo lo que Jehová os respondiere, os enseñaré; no os reservaré palabra."),
 BibleVerse(24, 42, 5, "Y ellos dijeron a Jeremías: Jehová sea entre nosotros testigo de la verdad y de la lealtad, si no hiciéremos conforme a todo aquello para lo cual Jehová tu Dios te enviare a nosotros."),

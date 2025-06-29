@@ -29,7 +29,7 @@ PRG="$0"
 while [ -h "$PRG" ] ; do
     ls=`ls -ld "$PRG"`
     link=`expr "$ls" : '.*-> \(.*\)$'`
-    if expr "$link" : '/.*' > /dev/null; then
+    if expr "$link" : '/.*' > /devull; then
         PRG="$link"
     else
         PRG=`dirname "$PRG"`"/$link"

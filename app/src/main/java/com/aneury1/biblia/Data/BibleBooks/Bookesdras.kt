@@ -6,7 +6,7 @@ object book_Bookesdras {
    fun get_book_Bookesdras()=listOf(
         BibleVerse(15, 1, 1, "En el primer año de Ciro rey de Persia, para que se cumpliese la palabra de Jehová por boca de Jeremías, despertó Jehová el espíritu de Ciro rey de Persia, el cual hizo pregonar de palabra y también por escrito por todo su reino, diciendo:"),
 BibleVerse(15, 1, 2, "Así ha dicho Ciro rey de Persia: Jehová el Dios de los cielos me ha dado todos los reinos de la tierra, y me ha mandado que le edifique casa en Jerusalén, que está en Judá."),
-BibleVerse(15, 1, 3, "Quien haya entre vosotros de su pueblo, sea Dios con él, y suba a Jerusalén que está en Judá, y edifique la casa a Jehová Dios de Israel BibleVerse(él es el Dios), la cual está en Jerusalén."),
+BibleVerse(15, 1, 3, "Quien haya entre vosotros de su pueblo, sea Dios con él, y suba a Jerusalén que está en Judá, y edifique la casa a Jehová Dios de Israel él es el Dios), la cual está en Jerusalén."),
 BibleVerse(15, 1, 4, "Y a todo el que haya quedado, en cualquier lugar donde more, ayúdenle los hombres de su lugar con plata, oro, bienes y ganados, además de ofrendas voluntarias para la casa de Dios, la cual está en Jerusalén."),
 BibleVerse(15, 1, 5, "Entonces se levantaron los jefes de las casas paternas de Judá y de Benjamín, y los sacerdotes y levitas, todos aquellos cuyo espíritu despertó Dios para subir a edificar la casa de Jehová, la cual está en Jerusalén."),
 BibleVerse(15, 1, 6, "Y todos los que estaban en sus alrededores les ayudaron con plata y oro, con bienes y ganado, y con cosas preciosas, además de todo lo que se ofreció voluntariamente."),
@@ -262,7 +262,7 @@ BibleVerse(15, 10, 19, "Y dieron su mano en promesa de que despedirían sus muje
 BibleVerse(15, 10, 20, "De los hijos de Imer: Hanani y Zebadías."),
 BibleVerse(15, 10, 21, "De los hijos de Harim: Maasías, Elías, Semaías, Jehiel y Uzías."),
 BibleVerse(15, 10, 22, "De los hijos de Pasur: Elioenai, Maasías, Ismael, Natanael, Jozabad y Elasa."),
-BibleVerse(15, 10, 23, "De los hijos de los levitas: Jozabad, Simei, Kelaía BibleVerse(éste es Kelita), Petaías, Judá y Eliezer."),
+BibleVerse(15, 10, 23, "De los hijos de los levitas: Jozabad, Simei, Kelaía éste es Kelita, Petaías, Judá y Eliezer."),
 BibleVerse(15, 10, 24, "De los cantores: Eliasib; y de los porteros: Salum, Telem y Uri."),
 BibleVerse(15, 10, 25, "Asimismo de Israel: De los hijos de Paros: Ramía, Jezías, Malquías, Mijamín, Eleazar, Malquías y Benaía."),
 BibleVerse(15, 10, 26, "De los hijos de Elam: Matanías, Zacarías, Jehiel, Abdi, Jeremot y Elías."),

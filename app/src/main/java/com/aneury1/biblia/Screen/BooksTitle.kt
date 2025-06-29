@@ -27,7 +27,6 @@ import androidx.navigation.NavHostController
 fun replaceUnderscore(currentText: String) :String{
 
    val ret= currentText.replace('_',' ')
-
     return ret;
 }
 

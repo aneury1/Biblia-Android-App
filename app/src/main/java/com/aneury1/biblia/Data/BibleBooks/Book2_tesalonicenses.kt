@@ -13,7 +13,7 @@ BibleVerse(53, 1, 6, "Porque es justo delante de Dios pagar con tribulación a l
 BibleVerse(53, 1, 7, "y a vosotros que sois atribulados, daros reposo con nosotros, cuando se manifieste el Señor Jesús desde el cielo con los ángeles de su poder,"),
 BibleVerse(53, 1, 8, "en llama de fuego, para dar retribución a los que no conocieron a Dios, ni obedecen al evangelio de nuestro Señor Jesucristo;"),
 BibleVerse(53, 1, 9, "los cuales sufrirán pena de eterna perdición, excluidos de la presencia del Señor y de la gloria de su poder,"),
-BibleVerse(53, 1, 10, "cuando venga en aquel día para ser glorificado en sus santos y ser admirado en todos los que creyeron BibleVerse(por cuanto nuestro testimonio ha sido creído entre vosotros)."),
+BibleVerse(53, 1, 10, "cuando venga en aquel día para ser glorificado en sus santos y ser admirado en todos los que creyeron por cuanto nuestro testimonio ha sido creído entre vosotros)."),
 BibleVerse(53, 1, 11, "Por lo cual asimismo oramos siempre por vosotros, para que nuestro Dios os tenga por dignos de su llamamiento, y cumpla todo propósito de bondad y toda obra de fe con su poder,"),
 BibleVerse(53, 1, 12, "para que el nombre de nuestro Señor Jesucristo sea glorificado en vosotros, y vosotros en él, por la gracia de nuestro Dios y del Señor Jesucristo."),
 BibleVerse(53, 2, 1, "Pero con respecto a la venida de nuestro Señor Jesucristo, y nuestra reunión con él, os rogamos, hermanos,"),

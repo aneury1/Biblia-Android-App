@@ -74,7 +74,7 @@ BibleVerse(60, 3, 17, "Porque mejor es que padezcáis haciendo el bien, si la vo
 BibleVerse(60, 3, 18, "Porque también Cristo padeció una sola vez por los pecados, el justo por los injustos, para llevarnos a Dios, siendo a la verdad muerto en la carne, pero vivificado en espíritu;"),
 BibleVerse(60, 3, 19, "en el cual también fue y predicó a los espíritus encarcelados,"),
 BibleVerse(60, 3, 20, "los que en otro tiempo desobedecieron, cuando una vez esperaba la paciencia de Dios en los días de Noé, mientras se preparaba el arca, en la cual pocas personas, es decir, ocho, fueron salvadas por agua."),
-BibleVerse(60, 3, 21, "El bautismo que corresponde a esto ahora nos salva BibleVerse(no quitando las inmundicias de la carne, sino como la aspiración de una buena conciencia hacia Dios) por la resurrección de Jesucristo,"),
+BibleVerse(60, 3, 21, "El bautismo que corresponde a esto ahora nos salva no quitando las inmundicias de la carne, sino como la aspiración de una buena conciencia hacia Dios) por la resurrección de Jesucristo,"),
 BibleVerse(60, 3, 22, "quien habiendo subido al cielo está a la diestra de Dios; y a él están sujetos ángeles, autoridades y potestades."),
 BibleVerse(60, 4, 1, "Puesto que Cristo ha padecido por nosotros en la carne, vosotros también armaos del mismo pensamiento; pues quien ha padecido en la carne, terminó con el pecado,"),
 BibleVerse(60, 4, 2, "para no vivir el tiempo que resta en la carne, conforme a las concupiscencias de los hombres, sino conforme a la voluntad de Dios."),

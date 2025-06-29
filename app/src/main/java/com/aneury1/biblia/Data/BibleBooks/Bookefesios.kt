@@ -31,7 +31,7 @@ BibleVerse(49, 2, 1, "Y él os dio vida a vosotros, cuando estabais muertos en v
 BibleVerse(49, 2, 2, "en los cuales anduvisteis en otro tiempo, siguiendo la corriente de este mundo, conforme al príncipe de la potestad del aire, el espíritu que ahora opera en los hijos de desobediencia,"),
 BibleVerse(49, 2, 3, "entre los cuales también todos nosotros vivimos en otro tiempo en los deseos de nuestra carne, haciendo la voluntad de la carne y de los pensamientos, y éramos por naturaleza hijos de ira, lo mismo que los demás."),
 BibleVerse(49, 2, 4, "Pero Dios, que es rico en misericordia, por su gran amor con que nos amó,"),
-BibleVerse(49, 2, 5, "aun estando nosotros muertos en pecados, nos dio vida juntamente con Cristo BibleVerse(por gracia sois salvos),"),
+BibleVerse(49, 2, 5, "aun estando nosotros muertos en pecados, nos dio vida juntamente con Cristo por gracia sois salvos),"),
 BibleVerse(49, 2, 6, "y juntamente con él nos resucitó, y asimismo nos hizo sentar en los lugares celestiales con Cristo Jesús,"),
 BibleVerse(49, 2, 7, "para mostrar en los siglos venideros las abundantes riquezas de su gracia en su bondad para con nosotros en Cristo Jesús."),
 BibleVerse(49, 2, 8, "Porque por gracia sois salvos por medio de la fe; y esto no de vosotros, pues es don de Dios;"),

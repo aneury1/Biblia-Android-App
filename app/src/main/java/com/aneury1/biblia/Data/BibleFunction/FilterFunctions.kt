@@ -69,7 +69,6 @@ import com.aneury1.biblia.Data.BibleBooks.book_Booktito.get_book_Booktito
 import com.aneury1.biblia.Data.BibleBooks.book_Bookzacarias.get_book_Bookzacarias
 import com.aneury1.biblia.Data.BibleVerse
 object BibleData {
-
     fun getWholeBook(): Map<String, List<BibleVerse>> {
         return mapOf(
             "Salmos" to get_book_Booksalmos(),
@@ -78,27 +77,27 @@ object BibleData {
             "Hechos" to get_book_Bookhechos(),
             "Genesis" to get_book_Bookgenesis(),
             "Joel" to get_book_Bookjoel(),
-            "2_tesalonicenses" to get_book_Book2_tesalonicenses(),
-            "1_pedro" to get_book_Book1_pedro(),
-            "1_timoteo" to get_book_Book1_timoteo(),
+            "tesalonicenses 2" to get_book_Book2_tesalonicenses(),
+            "pedro 1" to get_book_Book1_pedro(),
+            "timoteo 1" to get_book_Book1_timoteo(),
             "Marcos" to get_book_Bookmarcos(),
-            "1_samuel" to get_book_Book1_samuel(),
+            "samuel 1" to get_book_Book1_samuel(),
             "Ezequiel" to get_book_Bookezequiel(),
             "Santiago" to get_book_Booksantiago(),
             "Job" to get_book_Bookjob(),
             "Cantares" to get_book_Bookcantares(),
-            "1_tesalonicenses" to get_book_Book1_tesalonicenses(),
+            "tesalonicenses 1" to get_book_Book1_tesalonicenses(),
             "Habacuc" to get_book_Bookhabacuc(),
             "Malaquias" to get_book_Bookmalaquias(),
             "Levitico" to get_book_Booklevitico(),
             "Nehemias" to get_book_Booknehemias(),
             "Sofonias" to get_book_Booksofonias(),
-            "2_pedro" to get_book_Book2_pedro(),
+            "pedro 2" to get_book_Book2_pedro(),
             "Lamentaciones" to get_book_Booklamentaciones(),
-            "2_corintios" to get_book_Book2_corintios(),
+            "corintios 2" to get_book_Book2_corintios(),
             "Numeros" to get_book_Booknumeros(),
             "Nahum" to get_book_Booknahum(),
-            "1_reyes" to get_book_Book1_reyes(),
+            "reyes 1" to get_book_Book1_reyes(),
             "Mateo" to get_book_Bookmateo(),
             "Filipenses" to get_book_Bookfilipenses(),
             "Galatas" to get_book_Bookgalatas(),
@@ -112,11 +111,11 @@ object BibleData {
             "Hageo" to get_book_Bookhageo(),
             "Jonas" to get_book_Bookjonas(),
             "Daniel" to get_book_Bookdaniel(),
-            "3_juan" to get_book_Book3_juan(),
+            "juan 3" to get_book_Book3_juan(),
             "Exodo" to get_book_Bookexodo(),
             "Filemon" to get_book_Bookfilemon(),
-            "2_timoteo" to get_book_Book2_timoteo(),
-            "2_reyes" to get_book_Book2_reyes(),
+            "timoteo 2" to get_book_Book2_timoteo(),
+            "reyes 2" to get_book_Book2_reyes(),
             "Isaias" to get_book_Bookisaias(),
             "Amos" to get_book_Bookamos(),
             "Zacarias" to get_book_Bookzacarias(),
@@ -126,20 +125,23 @@ object BibleData {
             "Lucas" to get_book_Booklucas(),
             "Jueces" to get_book_Bookjueces(),
             "Efesios" to get_book_Bookefesios(),
-            "1_corintios" to get_book_Book1_corintios(),
-            "2_cronicas" to get_book_Book2_cronicas(),
-            "1_cronicas" to get_book_Book1_cronicas(),
+            "corintios 1" to get_book_Book1_corintios(),
+            "cronicas 2" to get_book_Book2_cronicas(),
+            "cronicas 1" to get_book_Book1_cronicas(),
             "Eclesiastes" to get_book_Bookeclesiastes(),
-            "1_juan" to get_book_Book1_juan(),
+            "juan 1" to get_book_Book1_juan(),
             "Judas" to get_book_Bookjudas(),
-            "2_samuel" to get_book_Book2_samuel(),
+            "samuel 2" to get_book_Book2_samuel(),
             "Romanos" to get_book_Bookromanos(),
             "Josue" to get_book_Bookjosue(),
-            "2_juan" to get_book_Book2_juan(),
+            "juan 2" to get_book_Book2_juan(),
             "Deuteronomio" to get_book_Bookdeuteronomio(),
             "Proverbios" to get_book_Bookproverbios()
         )
     }
+
+
+
 
     fun getBooksNames(): List<String> {
         return listOf(
@@ -151,12 +153,12 @@ object BibleData {
             "Josue",
             "Jueces",
             "Rut",
-            "1_samuel",
-            "2_samuel",
-            "1_reyes",
-            "2_reyes",
-            "1_cronicas",
-            "2_cronicas",
+            "samuel 1",
+            "samuel 2",
+            "reyes 1",
+            "reyes 2",
+            "cronicas 1",
+            "cronicas 2",
             "Esdras",
             "Nehemias",
             "Ester",
@@ -188,32 +190,30 @@ object BibleData {
             "Juan",
             "Hechos",
             "Romanos",
-            "1_corintios",
-            "2_corintios",
+            "corintios 1",
+            "corintios 2",
             "Galatas",
             "Efesios",
             "Filipenses",
             "Colosenses",
-            "1_tesalonicenses",
-            "2_tesalonicenses",
-            "1_timoteo",
-            "2_timoteo",
+            "tesalonicenses 1",
+            "tesalonicenses 2",
+            "timoteo 1",
+            "timoteo 2",
             "Tito",
             "Filemon",
             "Hebreos",
             "Santiago",
-            "1_pedro",
-            "2_pedro",
-            "1_juan",
-            "2_juan",
-            "3_juan",
+            "pedro 1",
+            "pedro 2",
+            "juan 1" ,
+            "juan 2",
+            "juan 3",
             "Judas",
-            "Apocalipsis"
+            "Apocalipsis",
+            "Notas Guardadas",
+            "Configuracion"
         )
     }
 
 }
-
-
-
-

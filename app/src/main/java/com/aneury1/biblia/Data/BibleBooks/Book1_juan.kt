@@ -5,7 +5,7 @@ import com.aneury1.biblia.Data.BibleVerse
 object book_Book1_juan {
    fun get_book_Book1_juan()=listOf(
         BibleVerse(62, 1, 1, "Lo que era desde el principio, lo que hemos oído, lo que hemos visto con nuestros ojos, lo que hemos contemplado, y palparon nuestras manos tocante al Verbo de vida"),
-BibleVerse(62, 1, 2, "BibleVerse(porque la vida fue manifestada, y la hemos visto, y testificamos, y os anunciamos la vida eterna, la cual estaba con el Padre, y se nos manifestó);"),
+BibleVerse(62, 1, 2, "porque la vida fue manifestada, y la hemos visto, y testificamos, y os anunciamos la vida eterna, la cual estaba con el Padre, y se nos manifestó"),
 BibleVerse(62, 1, 3, "lo que hemos visto y oído, eso os anunciamos, para que también vosotros tengáis comunión con nosotros; y nuestra comunión verdaderamente es con el Padre, y con su Hijo Jesucristo."),
 BibleVerse(62, 1, 4, "Estas cosas os escribimos, para que vuestro gozo sea cumplido."),
 BibleVerse(62, 1, 5, "Este es el mensaje que hemos oído de él, y os anunciamos: Dios es luz, y no hay ningunas tinieblas en él."),

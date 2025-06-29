@@ -7,14 +7,14 @@ plugins {
 
 android {
     namespace = "com.aneury1.biblia"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.aneury1.biblia"
-        minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        minSdk = 30
+        targetSdk = 35
+        versionCode = 3
+        versionName = "1.0.0a1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -122,5 +122,18 @@ dependencies {
     // optional - Paging 3 Integration
     implementation("androidx.room:room-paging:$room_version")
 
+
+    /// Coroutines
+    // Kotlin coroutines core library
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+
+    // For Android main thread support and integration with Compose
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    // Jetpack Compose UI (if not added yet)
+            implementation("androidx.compose.ui:ui:1.5.0")
+
+    // Compose runtime (includes rememberCoroutineScope)
+            implementation("androidx.compose.runtime:runtime:1.5.0")
 
 }

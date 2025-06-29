@@ -241,7 +241,7 @@ BibleVerse(42, 5, 20, "Al ver él la fe de ellos, le dijo: Hombre, tus pecados t
 BibleVerse(42, 5, 21, "Entonces los escribas y los fariseos comenzaron a cavilar, diciendo: ¿Quién es éste que habla blasfemias? ¿Quién puede perdonar pecados sino sólo Dios?"),
 BibleVerse(42, 5, 22, "Jesús entonces, conociendo los pensamientos de ellos, respondiendo les dijo: ¿Qué caviláis en vuestros corazones?"),
 BibleVerse(42, 5, 23, "¿Qué es más fácil, decir: Tus pecados te son perdonados, o decir: Levántate y anda?"),
-BibleVerse(42, 5, 24, "Pues para que sepáis que el Hijo del Hombre tiene potestad en la tierra para perdonar pecados BibleVerse(dijo al paralítico): A ti te digo: Levántate, toma tu lecho, y vete a tu casa."),
+BibleVerse(42, 5, 24, "Pues para que sepáis que el Hijo del Hombre tiene potestad en la tierra para perdonar pecados  (dijo al paralítico): A ti te digo: Levántate, toma tu lecho, y vete a tu casa."),
 BibleVerse(42, 5, 25, "Al instante, levantándose en presencia de ellos, y tomando el lecho en que estaba acostado, se fue a su casa, glorificando a Dios."),
 BibleVerse(42, 5, 26, "Y todos, sobrecogidos de asombro, glorificaban a Dios; y llenos de temor, decían: Hoy hemos visto maravillas."),
 BibleVerse(42, 5, 27, "Después de estas cosas salió, y vio a un publicano llamado Leví, sentado al banco de los tributos públicos, y le dijo: Sígueme."),

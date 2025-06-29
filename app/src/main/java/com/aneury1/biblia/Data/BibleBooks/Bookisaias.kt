@@ -990,7 +990,7 @@ BibleVerse(23, 49, 1, "Oídme, costas, y escuchad, pueblos lejanos. Jehová me l
 BibleVerse(23, 49, 2, "Y puso mi boca como espada aguda, me cubrió con la sombra de su mano; y me puso por saeta bruñida, me guardó en su aljaba;"),
 BibleVerse(23, 49, 3, "y me dijo: Mi siervo eres, oh Israel, porque en ti me gloriaré."),
 BibleVerse(23, 49, 4, "Pero yo dije: Por demás he trabajado, en vano y sin provecho he consumido mis fuerzas; pero mi causa está delante de Jehová, y mi recompensa con mi Dios."),
-BibleVerse(23, 49, 5, "Ahora pues, dice Jehová, el que me formó desde el vientre para ser su siervo, para hacer volver a él a Jacob y para congregarle a Israel BibleVerse(porque estimado seré en los ojos de Jehová, y el Dios mío será mi fuerza);"),
+BibleVerse(23, 49, 5, "Ahora pues, dice Jehová, el que me formó desde el vientre para ser su siervo, para hacer volver a él a Jacob y para congregarle a Israel (porque estimado seré en los ojos de Jehová, y el Dios mío será mi fuerza);"),
 BibleVerse(23, 49, 6, "dice: Poco es para mí que tú seas mi siervo para levantar las tribus de Jacob, y para que restaures el remanente de Israel; también te di por luz de las naciones, para que seas mi salvación hasta lo postrero de la tierra."),
 BibleVerse(23, 49, 7, "Así ha dicho Jehová, Redentor de Israel, el Santo suyo, al menospreciado de alma, al abominado de las naciones, al siervo de los tiranos: Verán reyes, y se levantarán príncipes, y adorarán por Jehová; porque fiel es el Santo de Israel, el cual te escogió."),
 BibleVerse(23, 49, 8, "Así dijo Jehová: En tiempo aceptable te oí, y en el día de salvación te ayudé; y te guardaré, y te daré por pacto al pueblo, para que restaures la tierra, para que heredes asoladas heredades;"),

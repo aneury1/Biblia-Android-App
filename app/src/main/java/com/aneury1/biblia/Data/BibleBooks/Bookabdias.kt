@@ -8,7 +8,7 @@ object book_Bookabdias {
 BibleVerse(31, 1, 2, "He aquí, pequeño te he hecho entre las naciones; estás abatido en gran manera."),
 BibleVerse(31, 1, 3, "La soberbia de tu corazón te ha engañado, tú que moras en las hendiduras de las peñas, en tu altísima morada; que dices en tu corazón:  ¿Quién me derribará a tierra?"),
 BibleVerse(31, 1, 4, "Si te remontares como águila, y aunque entre las estrellas pusieres tu nido, de ahí te derribaré, dice Jehová."),
-BibleVerse(31, 1, 5, "Si ladrones vinieran a ti, o robadores de noche BibleVerse(¡cómo has sido destruido!),  ¿no hurtarían lo que les bastase? Si entraran a ti vendimiadores,  ¿no dejarían algún rebusco?"),
+BibleVerse(31, 1, 5, "Si ladrones vinieran a ti, o robadores de noche ¡cómo has sido destruido!),  ¿no hurtarían lo que les bastase? Si entraran a ti vendimiadores,  ¿no dejarían algún rebusco?"),
 BibleVerse(31, 1, 6, "¡Cómo fueron escudriñadas las cosas de Esaú! Sus tesoros escondidos fueron buscados."),
 BibleVerse(31, 1, 7, "Todos tus aliados te han engañado; hasta los confines te hicieron llegar; los que estaban en paz contigo prevalecieron contra ti; los que comían tu pan pusieron lazo debajo de ti; no hay en ello entendimiento."),
 BibleVerse(31, 1, 8, "¿No haré que perezcan en aquel día, dice Jehová, los sabios de Edom, y la prudencia del monte de Esaú?"),

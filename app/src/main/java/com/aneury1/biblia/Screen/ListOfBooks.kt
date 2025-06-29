@@ -27,8 +27,6 @@ fun ListOfBooks(navHostController: NavHostController){
         Spacer(modifier=Modifier.height(10.dp))
         Text("Biblia Reina Valera 1960", fontSize = 32.sp, fontWeight = FontWeight.Bold)
         Spacer(modifier=Modifier.height(10.dp))
-        ///Text("Antiguo Testamento", fontSize = 32.sp, fontWeight = FontWeight.Normal)
-        ///Spacer(modifier=Modifier.height(10.dp))
         LazyColumn(){
             val books = BibleData.getBooksNames()
             items(count = books.size){
