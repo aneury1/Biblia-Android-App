@@ -17,11 +17,17 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -60,8 +66,8 @@ fun ShowBibleBooks(navHostController: NavHostController)
     Column(
         modifier = Modifier.fillMaxSize().padding(32.dp)
     ){
-        Spacer(modifier=Modifier.height(10.dp))
-        Text("Biblia Reina Valera 1960", fontSize = 32.sp, fontWeight = FontWeight.Bold)
+        Spacer(modifier=Modifier.height(32.dp))
+        Text("Biblia Reina Valera 1960", fontSize = 32.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
         Spacer(modifier=Modifier.height(10.dp))
         LazyColumn(){
             val books = BibleData.getBooksNames()
@@ -69,7 +75,7 @@ fun ShowBibleBooks(navHostController: NavHostController)
                 Log.d("Bible","Book ${books[it]}");
                 if(books[it]=="Mateo"){
                     Spacer(modifier=Modifier.height(10.dp))
-                    Text("Nuevo Testamento", fontSize = 32.sp, fontWeight = FontWeight.Normal)
+                    Text("Nuevo Testamento", fontSize = 32.sp, fontWeight = FontWeight.Black)
                     Spacer(modifier=Modifier.height(10.dp))
                     BookTitleV2(navHostController, books[it], true)
 
@@ -77,7 +83,7 @@ fun ShowBibleBooks(navHostController: NavHostController)
                 else if(books[it]=="Genesis")
                 {
                     Spacer(modifier=Modifier.height(10.dp))
-                    Text("Antiguo Testamento", fontSize = 32.sp, fontWeight = FontWeight.Normal)
+                    Text("Antiguo Testamento", fontSize = 32.sp, fontWeight = FontWeight.Black)
                     Spacer(modifier=Modifier.height(10.dp))
                     BookTitleV2(navHostController, books[it], true)
                 }
@@ -88,6 +94,12 @@ fun ShowBibleBooks(navHostController: NavHostController)
                 else if(books[it].contains("Configuracion"))
                 {
                     BookTitleV2(navHostController, books[it], false)
+                }
+                else if(books[it].length < 3)
+                {
+                    Log.d("biblia", "testing space")
+                    Spacer(modifier=Modifier.height(20.dp))
+
                 }
                 else
                 {
@@ -102,32 +114,58 @@ fun ShowBibleBooks(navHostController: NavHostController)
 @Composable
 fun ShowGridOfChapter(bookName: String, onItemClick: (Int)->Unit)
 {
-    val books = getWholeBook()
-    val booksNumbers = books[bookName]
-    var setOfNumber = mutableSetOf<Int>()
-    booksNumbers?.forEach {
-        print(it.chapter)
-        setOfNumber.add(it.chapter)
+    val books = remember { getWholeBook() }
+
+    val chapters = remember(bookName) {
+        books[bookName]
+            ?.map { it.chapter }
+            ?.distinct()
+            ?.sorted()
+            ?: emptyList()
     }
-    val columns = 8
-    LazyVerticalGrid(
-        columns = GridCells.Fixed(columns),
-        modifier = Modifier.fillMaxWidth(),
-        contentPadding = PaddingValues(2.dp)
-    ) {
-        val count = setOfNumber.toList().size
-        items(count) { item ->
-            Column (
-                horizontalAlignment = Alignment.CenterHorizontally,
-                modifier = Modifier
-                    .padding(5.dp)
-                    .background(Color(100,100,100,255))
-                    .clickable(onClick = {
-                        onItemClick(item+1)
-                    },
-                    )
+
+    var expanded by remember { mutableStateOf(false) }
+
+    Column(modifier = Modifier.fillMaxWidth()) {
+
+        // Toggle button (doesn't overlap anything)
+        Button(
+            onClick = { expanded = !expanded },
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(if (expanded) "Esconder Capitulos" else "Mostrar Capitulos")
+        }
+
+        // Grid container with controlled height
+        val gridHeight = if (expanded) 300.dp else 0.dp
+
+        Box(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(gridHeight)
+        ) {
+            LazyVerticalGrid(
+                columns = GridCells.Fixed(8),
+                modifier = Modifier.fillMaxSize(),
+                contentPadding = PaddingValues(2.dp)
             ) {
-                Text("${item+1}", color=Color.White, fontWeight = FontWeight.Black)
+                items(chapters.size) { index ->
+                    val chapter = chapters[index]
+
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        modifier = Modifier
+                            .padding(5.dp)
+                            .background(MaterialTheme.colorScheme.surface)
+                            .clickable { onItemClick(chapter) }
+                    ) {
+                        Text(
+                            text = "$chapter",
+                            fontWeight = FontWeight.Black,
+                            color = MaterialTheme.colorScheme.onSurface
+                        )
+                    }
+                }
             }
         }
     }
@@ -141,7 +179,7 @@ fun ShowBook(navHostController: NavHostController,bookname: String ="Genesis")
     var currentChapter= 1
     val listState = rememberLazyListState()
     Column (
-        modifier = Modifier.fillMaxWidth().padding(top=10.dp)){
+        modifier = Modifier.fillMaxWidth().padding(top=64.dp)){
         Text(bookname,
             modifier = Modifier.fillMaxWidth().padding(5.dp),
             fontSize = 33.sp,

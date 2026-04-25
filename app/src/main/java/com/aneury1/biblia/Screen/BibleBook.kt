@@ -99,18 +99,6 @@ fun BibleBook(navHostController: NavHostController, bookname: String)
                 }
             }
 
-
-//            val chapterVerse: MutableMap<Int, MutableList<BibleVerse>> = mutableMapOf()
-//            book.forEach { verse ->
-//                chapterVerse
-//                    .getOrPut(verse.chapter) { mutableListOf() }
-//                    .add(verse)
-//            }
-//
-//            chapterVerse.forEach { it
-//                ButtonGrid(it.value) { }
-//            }
-
             LazyColumn(state = listState) {
                 items(count = book.size){
                     val ch = book[it]

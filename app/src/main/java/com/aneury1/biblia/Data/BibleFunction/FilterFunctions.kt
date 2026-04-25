@@ -212,7 +212,8 @@ object BibleData {
             "Judas",
             "Apocalipsis",
             "Notas Guardadas",
-            "Configuracion"
+            "Configuracion",
+            " "
         )
     }
 

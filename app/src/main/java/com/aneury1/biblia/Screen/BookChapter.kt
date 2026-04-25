@@ -3,8 +3,10 @@ package com.aneury1.biblia.Screen
 import android.content.Context
 import android.content.Intent
 import android.util.Log
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -232,7 +234,7 @@ fun SimpleParagraph(number: Int, verseNo: Int, text: String,bookName: String){
                 val noteId = insertNote(
                     db,
                     BibleNote(
-                        book = "$bookName",
+                        book = bookName,
                         chapter = "$number",
                         verse = "$verseNo",
                         note = enteredText
@@ -273,7 +275,7 @@ fun SimpleParagraph(number: Int, verseNo: Int, text: String,bookName: String){
                         }
                     },
                     onPress = {
-                        showDialog = true
+                        showDialog = false /// change to true to see dialog
                     },
                     onLongPress = {
                         showDialog = false
@@ -289,7 +291,14 @@ fun SimpleParagraph(number: Int, verseNo: Int, text: String,bookName: String){
 
                 }
             }
-            .padding(4.dp).background(Color(0xe9edf5ff)).fillMaxWidth(),
+//            .padding(4.dp).background(Color(0xe9edf5ff)).fillMaxWidth(),
+        .padding(4.dp)
+            .border(
+                width = 1.dp,
+                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.1f)
+            )
+        .background(MaterialTheme.colorScheme.surface)
+        .fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally,
     ){
         Text(
@@ -297,7 +306,7 @@ fun SimpleParagraph(number: Int, verseNo: Int, text: String,bookName: String){
                 withStyle(style = SpanStyle(
                     fontWeight = FontWeight.Bold,
                     fontSize = 23.sp,
-                    color = Color.Red
+                    color = MaterialTheme.colorScheme.tertiary
                 )
                 ) {
                     if(isFavorite){
@@ -309,7 +318,7 @@ fun SimpleParagraph(number: Int, verseNo: Int, text: String,bookName: String){
                 withStyle(style = SpanStyle(
                     fontWeight = FontWeight.Bold,
                     fontSize = 23.sp,
-                    color = Color. Blue
+                    color = MaterialTheme.colorScheme.tertiary
                 )
                 ) {
                     append("$verseNo. ")

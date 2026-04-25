@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
@@ -67,7 +68,7 @@ fun NotasGuardada(navHostController: NavHostController)
                 horizontalArrangement = Arrangement.Center
             ) {
 
-                Text("No hay notas guardadas", fontSize = 32.sp, fontWeight = FontWeight.Bold)
+                Text("No hay notas guardadas", fontSize = 32.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
             }
 
         }
