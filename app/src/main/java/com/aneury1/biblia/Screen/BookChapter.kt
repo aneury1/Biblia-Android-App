@@ -3,12 +3,12 @@ package com.aneury1.biblia.Screen
 import android.content.Context
 import android.content.Intent
 import android.util.Log
-import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -21,14 +21,12 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.InlineTextContent
 import androidx.compose.foundation.text.appendInlineContent
-import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -36,7 +34,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
@@ -50,12 +47,13 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
-import androidx.navigation.NavHostController
 import com.aneury1.biblia.Data.BibleNote
 import com.aneury1.biblia.Data.BibleSqlite3
 import com.aneury1.biblia.Data.getAllNotes
 import com.aneury1.biblia.Data.insertNote
 import com.aneury1.biblia.R
+import androidx.core.content.edit
+
 @Composable
 fun TextInputDialog(
     title: String,
@@ -221,6 +219,43 @@ fun SimpleParagraph(number: Int, verseNo: Int, text: String,bookName: String){
         }
     )
 
+    val setChapterAsFavorite= {
+        showDialog = false
+        val prefs = context.getSharedPreferences("bible_favorites_${bookName}", Context.MODE_PRIVATE)
+        val current = prefs.getStringSet("favorites", mutableSetOf())?.toMutableSet() ?: mutableSetOf()
+        val save = "${number}:${verseNo}"
+
+        if(isFavorite ){
+            // current.removeIf {
+            //      isFavorite
+            // }
+            isFavorite=false
+            current.remove(save)
+            prefs.edit { putStringSet("favorites", current) }
+        }
+        else {
+            isFavorite=true
+            current.add(save)
+            prefs.edit{ putStringSet("favorites", current).apply()}
+        }
+    }
+
+    val showDialogAction ={
+        showDialog = true
+    }
+
+    val showSharedAction={
+        showDialog = false
+        val sendIntent = Intent().apply {
+            action = Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, text)
+            type = "text/plain"
+        }
+        val shareIntent = Intent.createChooser(sendIntent, null)
+        context.startActivity(shareIntent)
+    }
+
+
     if (showDialog) {
         TextInputDialog(
             title = "Agregar comentario",
@@ -255,30 +290,13 @@ fun SimpleParagraph(number: Int, verseNo: Int, text: String,bookName: String){
             .pointerInput(Unit){
                 detectTapGestures(
                     onDoubleTap = {
-                        showDialog = false
-                        val prefs = context.getSharedPreferences("bible_favorites_${bookName}", Context.MODE_PRIVATE)
-                        val current = prefs.getStringSet("favorites", mutableSetOf())?.toMutableSet() ?: mutableSetOf()
-                        val saveit = "${number}:${verseNo}"
-
-                        if(isFavorite ){
-                           // current.removeIf {
-                           //      isFavorite
-                           // }
-                            isFavorite=false
-                            current.remove(saveit)
-                            prefs.edit().putStringSet("favorites", current).apply()
-                        }
-                        else {
-                            isFavorite=true
-                            current.add(saveit)
-                            prefs.edit().putStringSet("favorites", current).apply()
-                        }
+                        setChapterAsFavorite()
                     },
                     onPress = {
                         showDialog = false /// change to true to see dialog
                     },
                     onLongPress = {
-                        showDialog = false
+                        showDialog = true
                         val sendIntent = Intent().apply {
                             action = Intent.ACTION_SEND
                             putExtra(Intent.EXTRA_TEXT, text)
@@ -291,7 +309,6 @@ fun SimpleParagraph(number: Int, verseNo: Int, text: String,bookName: String){
 
                 }
             }
-//            .padding(4.dp).background(Color(0xe9edf5ff)).fillMaxWidth(),
         .padding(4.dp)
             .border(
                 width = 1.dp,
@@ -329,6 +346,33 @@ fun SimpleParagraph(number: Int, verseNo: Int, text: String,bookName: String){
             fontSize = 20.sp,
             modifier = Modifier.padding(8.dp)
         )
+
+
+        Box(modifier = Modifier.fillMaxWidth().height(32.dp)){
+            Row(modifier = Modifier.fillMaxWidth().height(32.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceEvenly) {
+                Text("Compartir", fontWeight = FontWeight.Black, modifier = Modifier.pointerInput(
+                    Unit){
+                    detectTapGestures(onPress = {
+                        showSharedAction()
+                    },)
+                })
+                Text("Guardar Favorito ", fontWeight = FontWeight.Black, modifier = Modifier.pointerInput(
+                    Unit){
+                    detectTapGestures(onPress = {
+                        setChapterAsFavorite()
+                    },)
+                })
+                Text("Tomar Nota", fontWeight = FontWeight.Black, modifier = Modifier.pointerInput(
+                    Unit){
+                    detectTapGestures(onPress = {
+                        showDialogAction()
+                    },)
+                })
+                }
+            }
+
     }
 }
 
