@@ -157,7 +157,10 @@ fun ShowGridOfChapter(bookName: String, onItemClick: (Int)->Unit)
                         modifier = Modifier
                             .padding(5.dp)
                             .background(MaterialTheme.colorScheme.surface)
-                            .clickable { onItemClick(chapter) }
+                            .clickable {
+                                expanded = false
+                                onItemClick(chapter)
+                            }
                     ) {
                         Text(
                             text = "$chapter",
