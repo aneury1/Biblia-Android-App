@@ -53,6 +53,7 @@ import com.aneury1.biblia.Data.getAllNotes
 import com.aneury1.biblia.Data.insertNote
 import com.aneury1.biblia.R
 import androidx.core.content.edit
+import com.aneury1.biblia.Utils.AudioRecorder
 
 @Composable
 fun TextInputDialog(
@@ -177,11 +178,12 @@ fun CustomTextDialog(
 @Composable
 fun SimpleParagraph(number: Int, verseNo: Int, text: String,bookName: String){
     val context = LocalContext.current
+    val recorder = remember { AudioRecorder(context) }
     val recoverit = "${number}:${verseNo}"
     val prefslook = context.getSharedPreferences("bible_favorites_${bookName}", Context.MODE_PRIVATE)
     val key =prefslook.getStringSet("favorites", emptySet()) ?: emptySet()
     var showDialog by remember { mutableStateOf(false) }
-
+    var displayAction by remember { mutableStateOf(false) }
     var isFavorite by remember { mutableStateOf(key.filter { it -> it == recoverit }.isNotEmpty()) }
     val dbHelper = BibleSqlite3(context)
     val db = dbHelper.writableDatabase
@@ -255,6 +257,11 @@ fun SimpleParagraph(number: Int, verseNo: Int, text: String,bookName: String){
         context.startActivity(shareIntent)
     }
 
+    val showExtraAction = {
+        displayAction = true
+    }
+
+
 
     if (showDialog) {
         TextInputDialog(
@@ -263,8 +270,6 @@ fun SimpleParagraph(number: Int, verseNo: Int, text: String,bookName: String){
             onConfirm = { enteredText ->
                 showDialog = false
                 Log.d("Dialog", "User entered: $enteredText")
-
-
 
                 val noteId = insertNote(
                     db,
@@ -276,8 +281,6 @@ fun SimpleParagraph(number: Int, verseNo: Int, text: String,bookName: String){
                         ///createdAt = System.currentTimeMillis()
                     )
                 )
-
-
             },
             onDismiss = {
                 showDialog = false
@@ -287,28 +290,6 @@ fun SimpleParagraph(number: Int, verseNo: Int, text: String,bookName: String){
 
     Column(
         modifier = Modifier
-            .pointerInput(Unit){
-                detectTapGestures(
-                    onDoubleTap = {
-                        setChapterAsFavorite()
-                    },
-                    onPress = {
-                        showDialog = false /// change to true to see dialog
-                    },
-                    onLongPress = {
-                        showDialog = true
-                        val sendIntent = Intent().apply {
-                            action = Intent.ACTION_SEND
-                            putExtra(Intent.EXTRA_TEXT, text)
-                            type = "text/plain"
-                        }
-                        val shareIntent = Intent.createChooser(sendIntent, null)
-                        context.startActivity(shareIntent)
-                    }
-                ) {
-
-                }
-            }
         .padding(4.dp)
             .border(
                 width = 1.dp,
@@ -364,15 +345,30 @@ fun SimpleParagraph(number: Int, verseNo: Int, text: String,bookName: String){
                         setChapterAsFavorite()
                     },)
                 })
-                Text("Tomar Nota", fontWeight = FontWeight.Black, modifier = Modifier.pointerInput(
+                Text("+ Nota", fontWeight = FontWeight.Black, modifier = Modifier.pointerInput(
                     Unit){
                     detectTapGestures(onPress = {
                         showDialogAction()
                     },)
                 })
+
+                Text("mas...", fontWeight = FontWeight.Black, modifier = Modifier.pointerInput(
+                    Unit){
+                    detectTapGestures(onPress = {
+                        showExtraAction()
+                    },)
+                })
+                AudioRecordPopup(
+                    isVisible = displayAction,
+                    onDismiss = { displayAction = false },
+                    onStartRecording = { recorder.startRecording("${bookName}_${verseNo}") },
+                    onStopRecording = {
+                        val file = recorder.stopRecording()
+                        println("Saved at: $file")
+                    }
+                )
                 }
             }
-
     }
 }
 
@@ -394,36 +390,7 @@ fun ChapterParagraph(number: Int, verseNo: Int, text: String,bookName: String,ne
                     fontWeight = FontWeight.Black)
 
             }
-
             SimpleParagraph(number, verseNo, text,bookName)
-
-            /*
-            Text(
-                text = buildAnnotatedString {
-                    withStyle(style = SpanStyle(
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 23.sp,
-                        color = Color.Red
-                    )
-                    ) {
-                        append("$number. ")
-                    }
-                    withStyle(style = SpanStyle(
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 23.sp,
-                        color = Color. Blue
-                    )
-                    ) {
-                        append("$verseNo. ")
-                    }
-                    append(text)
-                },
-                fontSize = 20.sp,
-                modifier = Modifier.padding(8.dp)
-            )
-
-            */
         }
-
     }
 }
