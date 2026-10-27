@@ -1,80 +1,28 @@
 package com.aneury1.biblia.ui.theme
 
-import android.app.Activity
-import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.dynamicDarkColorScheme
-import androidx.compose.material3.dynamicLightColorScheme
-import androidx.compose.material3.lightColorScheme
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
 
-private val DarkColorScheme = darkColorScheme(
-    primary = Color.White,
-    onPrimary = Color.Black,
-
-    secondary = Color.White,
-    onSecondary = Color.Black,
-
-    tertiary = Color.White,
-    onTertiary = Color.Black,
-
-    background = Color.Black,
-    onBackground = Color.White,
-
-    surface = Color.Black,
-    onSurface = Color.White,
-
-    surfaceVariant = Color.Black,
-    onSurfaceVariant = Color.White,
-
-    outline = Color.White,
-
-    error = Color.White,
-    onError = Color.Black
+private val Light = lightColorScheme(
+    primary = Color(0xFF285C50), onPrimary = Color.White,
+    primaryContainer = Color(0xFFD8EAE2), onPrimaryContainer = Color(0xFF123A30),
+    secondary = Color(0xFF78633C), secondaryContainer = Color(0xFFF1E3C7),
+    background = Color(0xFFFAF8F3), surface = Color(0xFFFAF8F3),
+    surfaceVariant = Color(0xFFECEEE7), onSurface = Color(0xFF202923),
+    onSurfaceVariant = Color(0xFF526159), outline = Color(0xFF758178)
 )
-private val LightColorScheme = lightColorScheme(
-    primary = Color.Black,
-    onPrimary = Color.White,
-
-    secondary = Color.Black,
-    onSecondary = Color.White,
-
-    tertiary = Color.Black,
-    onTertiary = Color.White,
-
-    background = Color.White,
-    onBackground = Color.Black,
-
-    surface = Color.White,
-    onSurface = Color.Black,
-
-    surfaceVariant = Color.White,
-    onSurfaceVariant = Color.Black,
-
-    outline = Color.Black,
-
-    error = Color.Black,
-    onError = Color.White
+private val Dark = darkColorScheme(
+    primary = Color(0xFFA6D1BF), onPrimary = Color(0xFF10392D),
+    primaryContainer = Color(0xFF284E40), onPrimaryContainer = Color(0xFFD8EAE2),
+    secondary = Color(0xFFDEC799), secondaryContainer = Color(0xFF57492E),
+    background = Color(0xFF141C18), surface = Color(0xFF141C18),
+    surfaceVariant = Color(0xFF2A352F), onSurface = Color(0xFFE0E8DF),
+    onSurfaceVariant = Color(0xFFBCCABD)
 )
-
 @Composable
-fun BibliaTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
-    dynamicColor: Boolean = false, // force monochrome
-    content: @Composable () -> Unit
-) {
-    val colorScheme = when {
-        darkTheme -> DarkColorScheme
-        else -> LightColorScheme
-    }
-
-    MaterialTheme(
-        colorScheme = colorScheme,
-        typography = Typography,
-        content = content
-    )
+fun BibliaTheme(darkTheme: Boolean = isSystemInDarkTheme(), dynamicColor: Boolean = false,
+                content: @Composable () -> Unit) {
+    MaterialTheme(colorScheme = if (darkTheme) Dark else Light, typography = Typography, content = content)
 }

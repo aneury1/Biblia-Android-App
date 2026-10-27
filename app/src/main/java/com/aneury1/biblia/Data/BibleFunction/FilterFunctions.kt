@@ -211,6 +211,7 @@ object BibleData {
             "juan 3",
             "Judas",
             "Apocalipsis",
+            "Agregar Nota",
             "Notas Guardadas",
             "Configuracion",
             " "

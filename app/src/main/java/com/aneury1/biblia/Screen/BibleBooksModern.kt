@@ -91,6 +91,10 @@ fun ShowBibleBooks(navHostController: NavHostController)
                 {
                     BookTitleV2(navHostController, books[it], false)
                 }
+                else if(books[it].contains("Agregar Nota"))
+                {
+                    BookTitleV2(navHostController, books[it], false)
+                }
                 else if(books[it].contains("Configuracion"))
                 {
                     BookTitleV2(navHostController, books[it], false)
